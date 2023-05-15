@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns="http://www.thymeleaf.org">
+    <head th:replace="commons/head::head"/>
+
+    <body>
+        <div th:replace="commons/nav-bar::nav-bar"></div> 
+        <div class="container">
+            <h3>Add Student</h3>
+            <form th:action="@{/add}" th:object="${student}" method="POST">
+                <div class="form-group col-md-8">
+                    <label class="col-form-label">First name</label>
+                    <input type="text" class="form-control" placeholder="First name" th:field="*{firstname}">  
+                </div>
+                <div class="form-group col-md-8">
+                    <label class="col-form-label">Middle name</label>
+                    <input type="text" class="form-control" placeholder="First name" th:field="*{middlename}" >  
+                </div>
+                <div class="form-group col-md-8">
+                    <label class="col-form-label">Last name</label>
+                    <input type="text" class="form-control" placeholder="Last name" th:field="*{lastname}">  
+                </div>
+                <div class="col-md-6 my-4"></div>
+                <button type="submit" class="btn btn-primary"><i class="fa fa-floppy-disk"></i>Save</button>
+            </form>
+        </div>
+    </body>
+</html>

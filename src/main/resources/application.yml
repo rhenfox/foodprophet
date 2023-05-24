@@ -32,7 +32,6 @@ spring:
               scope:
                 - email
                 - profile
-#              redirectUri: https://localhost:8080/login/oauth2/code/google
             facebook:
               clientId: 151383627671358
               clientSecret: a35dd72a2a16a8c617e5b858cab1b905
